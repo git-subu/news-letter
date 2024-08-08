@@ -4,6 +4,7 @@ import NewsItem from "./NewsItem";
 const NewsBoard = ({ category }) => {
   const [articles, setArticles] = useState([]);
   useEffect(() => {
+    // Give the url with dynamic country and apikey
     let url = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=d4bcf46f036a4f8c9a8568aee682c2e1`;
     fetch(url)
       .then((response) => response.json())
